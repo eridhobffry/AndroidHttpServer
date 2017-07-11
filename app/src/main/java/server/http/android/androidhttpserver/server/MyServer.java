@@ -8,12 +8,16 @@ import java.io.IOException;
 public class MyServer extends NanoHTTPD {
     private final static int PORT = 8080;
 
+    //vererbt von Library NanoHTTPD
     public MyServer() throws IOException {
         super(PORT);
         start();
         System.out.println( "\nRunning! Point your browers to http://localhost:8080/ \n" );
     }
 
+    //Von Abstract Klasse NanoHTTPD
+    //Return in Response class
+    //Der braucht einen Parameter IHTTPSession Class
     @Override
     public Response serve(IHTTPSession session) {
         String msg = "<html><body><h1>Hello server</h1>\n";

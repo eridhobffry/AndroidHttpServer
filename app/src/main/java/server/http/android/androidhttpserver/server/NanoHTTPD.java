@@ -513,7 +513,8 @@ public abstract class NanoHTTPD {
             this.tempFileManager = tempFileManager;
             this.inputStream = new PushbackInputStream(inputStream, HTTPSession.BUFSIZE);
             this.outputStream = outputStream;
-            this.remoteIp = inetAddress.isLoopbackAddress() || inetAddress.isAnyLocalAddress() ? "127.0.0.1" : inetAddress.getHostAddress().toString();
+            //aenderung-1
+            this.remoteIp = inetAddress.isLoopbackAddress() || inetAddress.isAnyLocalAddress() ? "10.0.2.2" : inetAddress.getHostAddress().toString();
             this.headers = new HashMap<String, String>();
         }
 
